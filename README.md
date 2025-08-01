@@ -33,9 +33,38 @@ PROJECT/
 
 ## 🛠 Setup Instructions
 
-### 1️⃣ Install Python & Dependencies
+### 1 Install Python & Dependencies
 
 You need **Python 3.8+** installed.  
 Install the required Python package:
 ```bash
 pip install pandas
+```
+
+### 2 Create Sample Database (Optional for Testing)
+If you do not have the official Eastvantage-provided database, you can create a sample database for local testing:
+
+bash
+Copy
+Edit
+python create_sales_db.py
+This will generate sales.db containing:
+
+customers → customer IDs and ages
+
+orders → mapping customers to orders
+
+order_details → items purchased and their quantities
+
+The sample database includes:
+
+Primary keys
+
+Foreign keys
+
+Constraints (NOT NULL, CHECK)
+
+## 📄 Example Output
+Both the SQL and Pandas solutions produce the same results
+a CSV file listing each customer (aged 18–35), their purchased items,  
+and the total quantity per item, formatted with `;` as the delimiter.
